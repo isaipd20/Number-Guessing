@@ -4,16 +4,14 @@ public class NumGuess {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		int counter = 0;
-		int actualNum = Functions.randomNumber();
+		String select = "";
 		
-		while(Functions.getWinner() == false) {
-			
-			System.out.println("Guess a number between 0 - 100");
-			int num = input.nextInt();
-			
-			Functions.winner(actualNum, num, counter);
-			counter++;
+		while(MenuOptions.getQuit() != false) {
+			System.out.println("Welcome to Number Guessing!!" + '\n' + 
+					   "Select a difficulty: easy || medium || hard || quit");
+			select = input.next();
+
+			MenuOptions.options(select);
 		}	
 		input.close();
 	}
