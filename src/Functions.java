@@ -12,19 +12,33 @@ public class Functions {
 	}
 	
 	public static void winner(int randNum, int temp, int counter) {
+		int actualNum = randNum;
 		if(counter != 2) {
-			if(randNum == temp) {
+			if(actualNum == temp) {
 				System.out.println("You win!!!");
 				setWinner(true);
 			}
 			else {
 				System.out.println("Try again");
+				System.out.println("Your number is between: " + lowerHint(actualNum) + " & " + upperHint(actualNum) + '\n');
 			}
 		}
 		else {
-			System.out.println("You lose, actual number: " + randNum);
+			System.out.println("You lose, actual number: " + actualNum);
 			setWinner(true);
 		}
+	}
+	
+	public static int upperHint (int randNum) {
+		int upperHint = randNum + 10;
+		
+		return upperHint;
+	}
+	
+	public static int lowerHint (int randNum) {
+		int lowerHint = randNum - 10;
+
+		return lowerHint;
 	}
 	
 	public static void setWinner(boolean temp) {
@@ -33,7 +47,5 @@ public class Functions {
 	
 	public static boolean getWinner() {
 		return winner;
-	}
-	
-	
+	}	
 }
