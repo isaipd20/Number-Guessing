@@ -8,7 +8,7 @@ public class NumGuess {
 		
 		while(MenuOptions.getQuit() != false) {
 			System.out.println("Welcome to Number Guessing!!" + '\n' + 
-					   "Select a difficulty: easy || medium || hard || quit");
+					   "Select a difficulty: easy || medium || hard || custom || quit");
 			select = input.next();
 
 			MenuOptions.options(select);
