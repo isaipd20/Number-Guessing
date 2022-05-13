@@ -107,6 +107,11 @@ public class MenuOptions {
 				counter++;
 			}	
 			input.close();
+			input1.close();
+			input2.close();
+			input3.close();
+			input4.close();
+			input5.close();
 		}			
 	}
 	
